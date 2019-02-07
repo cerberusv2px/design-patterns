@@ -1,16 +1,24 @@
 package decorator
 
+import decorator.model.User
+import decorator.repository.AdminUserDecorator
+import decorator.repository.UserRepositoryImpl
+
 fun main() {
-    val circle = Circle()
-    val redCircle = RedShapeDecorator(Circle())
-    val redRect = RedShapeDecorator(Rectangle())
 
-    println("Circle with normal border")
-    circle.draw()
+    val userRepositoryImpl = UserRepositoryImpl()
+    // getAll(userRepositoryImpl)
 
-    println("Circle red border")
-    redCircle.draw()
+    val adminUserRepoImpl = AdminUserDecorator(userRepositoryImpl)
+    adminUserRepoImpl.insert(User(2, "Test", "Test"))
 
-    println("Rectangle red border")
-    redRect.draw()
+}
+
+private fun insertUser(userRepo: UserRepositoryImpl) {
+    val user = User(1, "Sujin", "KTM")
+    userRepo.insert(user)
+}
+
+private fun getAll(userRepo: UserRepositoryImpl) {
+    println(userRepo.getAll())
 }
