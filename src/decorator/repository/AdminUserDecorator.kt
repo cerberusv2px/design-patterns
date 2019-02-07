@@ -13,7 +13,6 @@ class AdminUserDecorator(userRepository: UserRepository) : UserDecorator(userRep
 
     override fun insert(user: User) {
         super.insert(user)
-
     }
 
     override fun updateUser(user: User) {

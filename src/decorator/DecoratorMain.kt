@@ -11,7 +11,6 @@ fun main() {
 
     val adminUserRepoImpl = AdminUserDecorator(userRepositoryImpl)
     adminUserRepoImpl.insert(User(2, "Test", "Test"))
-
 }
 
 private fun insertUser(userRepo: UserRepositoryImpl) {

@@ -36,6 +36,5 @@ class UserRepositoryImpl : UserRepository {
         stmt.setString(3, user.address)
         conn.executeUpdate()
         conn.close()
-
     }
 }
