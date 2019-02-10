@@ -21,3 +21,4 @@ private fun insertUser(userRepo: UserRepositoryImpl) {
 private fun getAll(userRepo: UserRepositoryImpl) {
     println(userRepo.getAll())
 }
+
