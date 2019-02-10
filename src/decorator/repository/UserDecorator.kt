@@ -2,7 +2,7 @@ package decorator.repository
 
 import decorator.model.User
 
-abstract class UserDecorator(protected val userRepository: UserRepository) : UserRepository {
+abstract class UserDecorator(private val userRepository: UserRepository) : UserRepository {
 
     override fun getAll(): List<User> {
         return userRepository.getAll()

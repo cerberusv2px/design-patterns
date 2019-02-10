@@ -12,8 +12,7 @@ class DBConnections {
 
     fun open() {
         Class.forName("org.postgresql.Driver")
-        conn =
-            DriverManager.getConnection("jdbc:postgresql://localhost:5432/test", "sujin.v2px", "")
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/test", "sujin.v2px", "")
     }
 
     fun initStatement(sql: String): PreparedStatement {
